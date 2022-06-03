@@ -1,17 +1,3 @@
-// import { View, Text } from 'react-native'
-// import React from 'react'
-
-// const HomeScreen = () => {
-//   return (
-//     <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-
-//       <Text style={{fontSize:34, color:'black'}}>HomeScreen</Text>
-//     </View>
-//   )
-// }
-
-// export default HomeScreen
-
 import React from 'react';
 import {
   View,
@@ -145,6 +131,7 @@ const HorizontalScroll = () => {
             height: '100%',
             overflow: 'hidden',
             borderRadius: 8,
+            
           }}>
           <View
             style={{
@@ -262,22 +249,24 @@ const BottomComponent = () => {
   );
 };
 
+
 const more = [
-  {id: 2, name: 'Celebrities', Routes: 'CelebListings'},
-  {id: 1, name: 'AboutUs', Routes: 'More'},
+  {id: 2, name: 'Celebrities', Route: 'Celebrities'},
+  {id: 1, name: 'Aboutus', Route: 'Aboutus'},
 ];
 const videos = [
-  {id: 1, name: 'Trailers', Routes: 'TrailerStack'},
-  {id: 2, name: 'Songs', Routes: 'Songs'},
+  {id: 1, name: 'Trailers', Route: 'Trailers'},
+  {id: 2, name: 'Songs', Route: 'Songs'},
 ];
 const movies = [
-  {id: 1, name: 'Movies', Routes: 'Movies'},
-  {id: 2, name: 'WatchList', Routes: 'WatchList'},
+  {id: 1, name: 'Movies', Route: 'Movies'},
+  {id: 2, name: 'WatchList', Route: 'WatchList'},
 ];
-const review = [
-  {id: 1, name: 'Reviews', Routes: 'Reviews'},
-  {id: 2, name: 'MyRatings', Routes: 'MyRatings'},
+const reviews = [
+  {id: 1, name: 'Reviews', Route: 'Reviews'},
+  {id: 2, name: 'MyRatings', Route: 'MyRating'},
 ];
+
 const HeaderBtn = ({navigation}) => {
   const [selectedItem, SetSelectedItem] = React.useState(null);
   const onSelect = item => {
@@ -285,22 +274,10 @@ const HeaderBtn = ({navigation}) => {
     SetSelectedItem(item);
   };
   return (
-    <View style={{marginHorizontal: 10, backgroundColor: 'black'}}>
+    <View style={{marginHorizontal: 10}}>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={{marginHorizontal: 12, marginVertical: 5}}>
           <Text onPress={() => navigation.navigate('Home')}>Home</Text>
-        </View>
-
-        <View style={{marginHorizontal: 12, marginVertical: 5}}>
-          <Text onPress={() => navigation.navigate('News')}>NewsAdda</Text>
-        </View>
-
-        <View style={{marginHorizontal: 12, marginVertical: 5}}>
-          <DropDown fruits={videos} onSelect={onSelect} defaultTitle="Videos" />
-        </View>
-
-        <View style={{marginHorizontal: 12, marginVertical: 5}}>
-          <DropDown fruits={movies} onSelect={onSelect} defaultTitle="Movies" />
         </View>
 
         <View
@@ -308,18 +285,42 @@ const HeaderBtn = ({navigation}) => {
             marginHorizontal: 12,
             marginVertical: 5,
           }}>
-          <Text onPress={() => navigation.navigate('BoxOffice')}>
+          <Text onPress={() => navigation.navigate('NewsAdda')}>News Adda</Text>
+        </View>
+        
+        <View style={{marginHorizontal: 12, marginVertical: 5}}>
+          <DropDown
+            fruits={videos}
+            onSelect={onSelect}
+           
+            defaultTitle="Videos"
+          />
+        </View>
+        <View style={{marginHorizontal: 12, marginVertical: 5}}>
+          <DropDown
+            fruits={movies}
+            onSelect={onSelect}
+           
+            defaultTitle="Movies"
+          />
+        </View>
+
+        <View style={{marginHorizontal: 12, marginVertical: 5}}>
+          <Text onPress={() => navigation.navigate('Boxoffice')}>
             Box Office
           </Text>
         </View>
         <View style={{marginHorizontal: 12, marginVertical: 5}}>
           <DropDown
-            fruits={review}
+            fruits={reviews}
             onSelect={onSelect}
+           
             defaultTitle="Reviews"
           />
         </View>
-        <View style={{marginHorizontal: 12, marginVertical: 5}}>
+
+        <View
+          style={{marginHorizontal: 12, marginVertical: 5, marginRight: 50}}>
           <DropDown
             fruits={more}
             onSelect={onSelect}
@@ -327,6 +328,7 @@ const HeaderBtn = ({navigation}) => {
             defaultTitle="More"
           />
         </View>
+        
       </ScrollView>
     </View>
   );
@@ -520,6 +522,7 @@ function HomeScreen({navigation}) {
                 alignSelf: 'center',
                 height: '100%',
                 width: '100%',
+                
               }}
             />
           </View>

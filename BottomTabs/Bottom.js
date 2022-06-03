@@ -7,6 +7,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import NewsAddaScreen from '../Screens/NewsAddaScreen';
 import ProfileScreen from '../Screens/ProfileScreen';
 import NewsReleaseScreen from '../Screens/NewsReleaseScreen';
+import MovieScreen from '../Screens/MovieScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -92,7 +93,7 @@ const Bottom = () => {
       />
       <Tabs.Screen
         name="Movies"
-        component={NewsReleaseScreen}
+        component={MovieScreen}
         options={{
           
           tabBarIcon: ({focused}) => (

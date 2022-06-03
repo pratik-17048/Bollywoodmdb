@@ -73,7 +73,7 @@ const DrawerNav = () => {
 
         <Drawer.Screen
         name="Logout"
-        component={LogoutScreen}
+        component={ProfileScreen}
         options={{
           drawerIcon: () => <MaterialCommunityIcons name="logout" size={30} />,
         }}

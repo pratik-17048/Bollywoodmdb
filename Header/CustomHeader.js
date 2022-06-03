@@ -25,7 +25,7 @@ function CustomHeader({isHome, title}) {
                   height: 25,
                   marginLeft: 5,
                   marginTop: 10,
-                  tintColor: 'white',
+                  tintColor: 'black',
                 }}
                 source={require('../Assets/menu.png')}
                 resizeMode="contain"
@@ -63,7 +63,7 @@ function CustomHeader({isHome, title}) {
                 ? {
                     flex: 1,
                     textAlign: 'center',
-                    color: 'white',
+                    color: 'black',
                     fontSize: 16,
                     fontWeight: '600',
                   }
@@ -71,7 +71,7 @@ function CustomHeader({isHome, title}) {
                     flex: 1,
                     textAlign: 'left',
                     marginLeft: 10,
-                    color: 'white',
+                    color: 'black',
                     fontSize: 16,
                     fontWeight: '600',
                   }
@@ -95,7 +95,7 @@ function CustomHeader({isHome, title}) {
                   style={{
                     width: 25,
                     height: 25,
-                    tintColor: 'white',
+                    tintColor: 'black',
                     marginLeft: 20,
                     marginRight: 5,
                   }}
@@ -107,7 +107,7 @@ function CustomHeader({isHome, title}) {
                 style={{
                   width: 25,
                   height: 25,
-                  tintColor: 'white',
+                  tintColor: 'black',
                   marginLeft: 20,
                 }}
               />
@@ -117,7 +117,7 @@ function CustomHeader({isHome, title}) {
                 style={{
                   width: 25,
                   height: 25,
-                  tintColor: 'white',
+                  tintColor: 'black',
                   marginLeft: 30,
                 }}
               />
