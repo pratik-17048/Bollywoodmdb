@@ -4,128 +4,107 @@ import {
   View,
   TouchableOpacity,
   FlatList,
+  Image
   
 } from 'react-native';
 import React from 'react';
 import CustomHeader from '../Header/CustomHeader';
 import {SafeAreaView} from 'react-native-safe-area-context';
-
 const Data = [
   {
-    id: 1,
+    id: '1',
+    img: require('../Assets/ritik.jpg'),
     description:
-      'Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus,Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus',
-    img: require('../Assets/akshay.jpg'),
+      'Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry s standard dummytext ever since the 1500s',
   },
   {
-    id: 2,
+    id: '2',
+    img: require('../Assets/salman.jpg'),
     description:
-      'Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus,Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus',
-    img: require('../Assets/akshay.jpg'),
+      'Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry s standard dummytext ever since the 1500s',
   },
   {
-    id: 3,
+    id: '3',
+    img: require('../Assets/alia.jpg'),
     description:
-      'Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus,Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus',
-    img: require('../Assets/akshay.jpg'),
+      'Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry s standard dummytext ever since the 1500s',
   },
   {
-    id: 4,
+    id: '4',
+    img: require('../Assets/laxmi.jpg'),
     description:
-      'Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus,Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus',
-    img: require('../Assets/akshay.jpg'),
+      'Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry s standard dummytext ever since the 1500s',
   },
   {
-    id: 5,
+    id: '5',
+    img: require('../Assets/pankaj.jpg'),
     description:
-      'Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus,Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus',
-    img: require('../Assets/akshay.jpg'),
+      'Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry s standard dummytext ever since the 1500s',
   },
   {
-    id: 6,
+    id: '6',
+    img: require('../Assets/allu.jpg'),
     description:
-      'Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus,Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus',
-    img: require('../Assets/akshay.jpg'),
+      'Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry s standard dummytext ever since the 1500s',
   },
   {
-    id: 7,
+    id: '7',
+    img: require('../Assets/chris.jpg'),
     description:
-      'Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus,Lorem ipsum dolor sit amet, venenatis velit nec, luctus lectus',
-    img: require('../Assets/akshay.jpg'),
+      'Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry s standard dummytext ever since the 1500s',
   },
 ];
 
-const ShowDetail = (item, navigation) => {
-  return (
-    <TouchableOpacity   style={styles.ViewContainer}
-    onPress={() => navigation.navigate('NewsDetail', item)}>
-      <View style={styles.itemImgContainer}>
-        <Image
-          source={item.img}
-          style={{
-            width: '100%',
-            height: '100%',
-            borderRadius: 10,
-            alignSelf: 'center',
-          }}
-        />
-      </View>
-
-      <View
+const DataItem = ({description, uri}) => (
+  <View style={{flex: 1, flexDirection: 'row', margin: 10,}}>
+    <View style={{height: 120, width: 140, marginLeft: 5}}>
+      <Image
+        source={uri}
         style={{
-          flexShrink: 1,
-          height: 100,
-          width: 210,
-          marginLeft: 2,
-          overflow: 'hidden',
-        }}>
-        <Text style={{flex: 1, overflow: 'hidden'}}>{item.description}</Text>
-      </View>
-    </TouchableOpacity>
+          alignSelf: 'center',
+          borderRadius: 10,
+          height: '100%',
+          width: '100%',
+        }}
+      />
+    </View>
+    <View
+      style={{
+        flexShrink: 1,
+        overflow: 'hidden',
+        height: 100,
+        width: 210,
+        marginLeft: 2,
+      }}>
+      <Text style={{flex: 1, overflow: 'hidden', marginLeft: 5}}>
+        {description}
+      </Text>
+    </View>
+  </View>
+);
+const Tags = ({navigation}) => {
+  const renderItem = ({item}) => (
+    <DataItem description={item.description} uri={item.img}></DataItem>
   );
-      };
 
-function TagsScreen({navigation}) {
-  const renderItem = ({item}) => {
-    <ShowDetail navigation={navigation} item={item}></ShowDetail>;
-  };
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <CustomHeader title="Tags" isHome={false} navigation={navigation} />
-      <Text style={styles.headerText}> Article </Text>
-      
+    <SafeAreaView style={{marginTop: 20}}>
+
+      <View>
+        <CustomHeader title="Tags" isHome={false}
+        navigation={navigation}/>
+      </View>
+      <Text style={{marginLeft: 15, fontSize: 20, fontWeight: '700'}}>
+        Related Topics
+      </Text>
       <FlatList
         data={Data}
         renderItem={renderItem}
-        keyExtractor={item => item.id}>
-          
-        </FlatList>
+        keyExtractor={item => item.id} style={{
+          marginBottom:90
+        }}></FlatList>
     </SafeAreaView>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  itemImgContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    margin: 10,
-  },
-  Sectionimg: {
-    width: 140,
-    height: 100,
-  },
-  ViewContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    margin: 10,
-  },
-  headerText: {
-    textTransform: 'uppercase',
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginHorizontal: 10,
-    marginVertical: 2,
-  },
-});
-
-export default TagsScreen;
+export default Tags;

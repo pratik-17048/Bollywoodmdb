@@ -14,38 +14,38 @@ import {
   const data = [
     {
       id: 1,
-      celebName: 'Bhool Bhulaiya',
-      img: require('../Assets/bb2.jpg'),
+      celebName: 'Chris',
+      img: require('../Assets/chris.jpg'),
      
     },
     {
       id: 2,
-      celebName: 'Ant Man',
-      img: require('../Assets/antman.jpg'),
+      celebName: 'Akshay Kumar',
+      img: require('../Assets/akp.jpg'),
       
     },
     {
       id: 3,
-      celebName: 'End Game',
-      img: require('../Assets/endgame.jpg'),
+      celebName: 'Tony Stark',
+      img: require('../Assets/tony.jpg'),
       
     },
     {
       id: 4,
-      celebName: 'Black Panther',
-      img: require('../Assets/blackpanther.jpg'),
+      celebName: 'Manoj Bajpayee',
+      img: require('../Assets/manoj.jpg'),
      
     },
     {
       id: 5,
-      celebName: 'Mirzapur',
-      img: require('../Assets/mir.jpg'),
+      celebName: 'Pankaj Tripathi',
+      img: require('../Assets/pankaj.jpg'),
      
     },
     {
       id: 6,
-      celebName: 'Laxmi',
-      img: require('../Assets/laxmi.jpg'),
+      celebName: 'Salman Khan',
+      img: require('../Assets/salman.jpg'),
      
     },
     {
@@ -74,12 +74,12 @@ import {
     },
   ];
   
-  const Posters = ({navigation}) => {
+  const WebStories = ({navigation}) => {
     const {colors} = useTheme();
     return (
       <View style={{marginBottom:50}}>
         <CustomHeader
-          title="Posters"
+          title="WebStories"
           isHome={false}
           navigation={navigation}
         />
@@ -95,7 +95,7 @@ import {
               marginVertical: 10,
               
             }}>
-           Posters
+           WebStories
           </Text>
   
           <View
@@ -115,7 +115,9 @@ import {
                   }}
                  >
                 
-              <View>
+              <TouchableOpacity 
+              onPress={()=> navigation.navigate('Stories')}
+              >
               <Image
                 source={element.img}
                 style={{
@@ -123,12 +125,13 @@ import {
                   width: 160,
                   overflow: 'hidden',
                   borderRadius: 5,
-                  
                  
-                }}>
+                }} 
+                
+                >
                 
               </Image>
-            </View>
+            </TouchableOpacity>
   
                   <Text
                     style={{
@@ -151,5 +154,5 @@ import {
     );
   };
   
-  export default Posters;
+  export default WebStories;
   

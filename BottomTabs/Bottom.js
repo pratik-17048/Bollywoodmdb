@@ -17,7 +17,7 @@ const Bottom = () => {
     screenOptions={{
       tabBarActiveTintColor: 'white',
       tabBarInactiveTintColor: 'black',
-      tabBarStyle: {backgroundColor: '#AAE443', minHeight: 55},
+      tabBarStyle: {backgroundColor: '#D8392B', minHeight: 55},
       headerShown: false,
       tabBarLabelStyle:{fontWeight:'500'},
      

@@ -8,6 +8,8 @@ import NewsDetails from '../Screens/NewsDetail'
 import NewsAddaScreen from '../Screens/NewsAddaScreen'
 import Posters from '../Screens/Posters';
 import Parties from '../Screens/Parties';
+import Banner from '../Screens/Banner';
+import Events from '../Screens/Events';
 
 const StackMovie = createStackNavigator();
 
@@ -43,6 +45,14 @@ const MovieStack = () => {
 
       <StackMovie.Screen name="Posters" component={Posters}
        options={{headerShown:false}}
+       />
+
+      <StackMovie.Screen name="Banner" component={Banner}
+        options={{headerShown:false}}
+       />
+
+      <StackMovie.Screen name="Events" component={Events}
+        options={{headerShown:false}}
        />
 
    </StackMovie.Navigator>

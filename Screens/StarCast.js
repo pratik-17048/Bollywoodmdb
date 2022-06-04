@@ -21,31 +21,31 @@ const Data = [
   },
   {
     id: 2,
-    img: require('../Assets/antman.jpg'),
+    img: require('../Assets/moneyheist.jpg'),
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry s standard dummytext ever since the 1500s',
   },
   {
     id: 3,
-    img: require('../Assets/antman.jpg'),
+    img: require('../Assets/ray.jpg'),
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry s standard dummytext ever since the 1500s',
   },
   {
     id: 4,
-    img: require('../Assets/antman.jpg'),
+    img: require('../Assets/arya.jpg'),
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry s standard dummytext ever since the 1500s',
   },
   {
     id: 5,
-    img: require('../Assets/antman.jpg'),
+    img: require('../Assets/bb2.jpg'),
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry s standard dummytext ever since the 1500s',
   },
   {
     id: 6,
-    img: require('../Assets/antman.jpg'),
+    img: require('../Assets/laxmi.jpg'),
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry s standard dummytext ever since the 1500s',
   },
@@ -228,7 +228,7 @@ const Videos = () => {
                 overflow: 'hidden',
                 borderRadius: 8,
               }}
-              source={require('../Assets/mahesh.jpg')}>
+              source={require('../Assets/alia.jpg')}>
               <View
                 style={{
                   backgroundColor: 'black',
@@ -258,8 +258,10 @@ const Videos = () => {
                 width: 180,
                 overflow: 'hidden',
                 borderRadius: 8,
+               
+                
               }}
-              source={require('../Assets/mahesh.jpg')}>
+              source={require('../Assets/pankaj.jpg')}>
               <View
                 style={{
                   backgroundColor: 'black',
@@ -268,7 +270,8 @@ const Videos = () => {
                   width: '100%',
                   flex: 1,
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  justifyContent: 'center'
+                  ,
                 }}>
                 <Text>
                   <Image
@@ -290,7 +293,7 @@ const Videos = () => {
                 overflow: 'hidden',
                 borderRadius: 8,
               }}
-              source={require('../Assets/mahesh.jpg')}>
+              source={require('../Assets/allu.jpg')}>
               <View
                 style={{
                   backgroundColor: 'black',
@@ -443,7 +446,7 @@ const StarCast = ({navigation}) => {
       marginLeft:10}}>
 
           <Image 
-          source={require('../Assets/allu.jpg')}
+          source={require('../Assets/kiara.jpg')}
           style={{
             height:140,
             width:120,

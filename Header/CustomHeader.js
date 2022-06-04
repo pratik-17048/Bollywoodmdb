@@ -15,7 +15,7 @@ function CustomHeader({isHome, title}) {
   const navigation =  useNavigation();
   return (
 
-      <View style={{flexDirection: 'row', height: 50, backgroundColor: '#AAE443'}}>
+      <View style={{flexDirection: 'row', height: 50, backgroundColor: '#D8392B'}}>
         <View style={{flexDirection: 'row', height: 50, marginHorizontal: 10}}>
           {isHome ? (
             <TouchableOpacity onPress={() => navigation.openDrawer()}>
@@ -25,7 +25,7 @@ function CustomHeader({isHome, title}) {
                   height: 25,
                   marginLeft: 5,
                   marginTop: 10,
-                  tintColor: 'black',
+                  tintColor: 'white',
                 }}
                 source={require('../Assets/menu.png')}
                 resizeMode="contain"
@@ -40,7 +40,7 @@ function CustomHeader({isHome, title}) {
                   width: 20,
                   height: 20,
                   marginHorizontal: 5,
-                  tintColor: 'black',
+                  tintColor: 'white',
                 }}
                 source={require('../Assets/back.png')}
                 resizeMode="contain"
@@ -63,7 +63,7 @@ function CustomHeader({isHome, title}) {
                 ? {
                     flex: 1,
                     textAlign: 'center',
-                    color: 'black',
+                    color: 'white',
                     fontSize: 16,
                     fontWeight: '600',
                   }
@@ -71,7 +71,7 @@ function CustomHeader({isHome, title}) {
                     flex: 1,
                     textAlign: 'left',
                     marginLeft: 10,
-                    color: 'black',
+                    color: 'white',
                     fontSize: 16,
                     fontWeight: '600',
                   }
@@ -95,7 +95,7 @@ function CustomHeader({isHome, title}) {
                   style={{
                     width: 25,
                     height: 25,
-                    tintColor: 'black',
+                    tintColor: 'white',
                     marginLeft: 20,
                     marginRight: 5,
                   }}
@@ -107,7 +107,7 @@ function CustomHeader({isHome, title}) {
                 style={{
                   width: 25,
                   height: 25,
-                  tintColor: 'black',
+                  tintColor: 'white',
                   marginLeft: 20,
                 }}
               />
@@ -117,7 +117,7 @@ function CustomHeader({isHome, title}) {
                 style={{
                   width: 25,
                   height: 25,
-                  tintColor: 'black',
+                  tintColor: 'white',
                   marginLeft: 30,
                 }}
               />

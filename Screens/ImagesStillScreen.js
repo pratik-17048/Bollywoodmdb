@@ -14,8 +14,8 @@ import {ScrollView} from 'react-native-gesture-handler';
 const data = [
   {
     id: 1,
-    celebName: 'Chris',
-    img: require('../Assets/chris.jpg'),
+    celebName: 'Shah Rukh Khan',
+    img: require('../Assets/shahrukh.jpg'),
    
   },
   {
@@ -26,8 +26,8 @@ const data = [
   },
   {
     id: 3,
-    celebName: 'Tony Stark',
-    img: require('../Assets/tony.jpg'),
+    celebName: 'Mahesh',
+    img: require('../Assets/mahesh.jpg'),
     
   },
   {
@@ -56,14 +56,14 @@ const data = [
   },
   {
     id: 8,
-    celebName: 'Kiara Advani',
-    img: require('../Assets/kiara.jpg'),
+    celebName: 'Chris',
+    img: require('../Assets/chris.jpg'),
 
   },
   {
     id: 9,
-    celebName: 'Katrina Kaif',
-    img: require('../Assets/kat.jpg'),
+    celebName: 'Hrithik',
+    img: require('../Assets/ritik.jpg'),
 
   },
   {
@@ -119,7 +119,7 @@ const ImagesStills = ({navigation}) => {
             <Image
               source={element.img}
               style={{
-                height: 220,
+                height: 120,
                 width: 160,
                 overflow: 'hidden',
                 borderRadius: 5,

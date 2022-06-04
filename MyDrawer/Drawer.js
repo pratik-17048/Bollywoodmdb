@@ -19,8 +19,8 @@ const DrawerNav = () => {
       initialRouteName="Home"
       screenOptions={{
         headerShown:false,
-        headerStyle: {backgroundColor: '#AAE443'},
-        drawerActiveBackgroundColor: '#AAE443',
+        headerStyle: {backgroundColor: '#D8392B'},
+        drawerActiveBackgroundColor: '#D8392B',
         drawerActiveTintColor: 'black',
         drawerStyle: {
           backgroundColor: 'grey',
@@ -57,7 +57,7 @@ const DrawerNav = () => {
       />
       <Drawer.Screen
         name="New Releases"
-        component={NewsReleaseScreen}
+        component={MovieScreen}
         options={{
           drawerIcon: () => <MaterialCommunityIcons name="alert-decagram"
            size={30} />,

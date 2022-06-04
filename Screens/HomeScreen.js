@@ -359,7 +359,7 @@ const WebStories = ({navigation}) => {
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={{marginHorizontal: 10}}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('FullScreenStories')}
+            onPress={() => navigation.navigate('WebStories')}
             style={{
               borderColor: '#696969',
               borderRadius: 5,
@@ -382,7 +382,7 @@ const WebStories = ({navigation}) => {
 
         <View style={{marginHorizontal: 10}}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('FullScreenStories')}
+            onPress={() => navigation.navigate('Stories')}
             style={{
               borderColor: '#696969',
               borderRadius: 5,
@@ -405,7 +405,7 @@ const WebStories = ({navigation}) => {
 
         <View style={{marginHorizontal: 10}}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('FullScreenStories')}
+            onPress={() => navigation.navigate('Stories')}
             style={{
               borderColor: '#696969',
               borderRadius: 5,
@@ -428,7 +428,7 @@ const WebStories = ({navigation}) => {
 
         <View style={{marginHorizontal: 10}}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('FullScreenStories')}
+            onPress={() => navigation.navigate('Stories')}
             style={{
               borderColor: '#696969',
               borderRadius: 5,

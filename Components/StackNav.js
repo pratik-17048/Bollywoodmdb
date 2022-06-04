@@ -27,6 +27,11 @@ import AboutUsScreen from '../Screens/AboutUsScreen';
 import MyRating from '../Screens/MyRating';
 import ReviewScreen from '../Screens/ReviewScreen';
 import Posters from '../Screens/Posters';
+import Banner from '../Screens/Banner';
+import Parties from '../Screens/Parties';
+import Events from '../Screens/Events';
+import WebStories from '../Screens/WebStories';
+import Stories from '../Screens/Stories';
 
 const Stack = createStackNavigator();
 
@@ -46,7 +51,9 @@ const StackNav = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen name="Setting" component={SettingScreen} />
-      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Login" component={LoginScreen} 
+       options={{headerShown: false}}
+      />
       <Stack.Screen name="Movie" component={MovieScreen} />
       <Stack.Screen
         name="NewsDetail"
@@ -115,6 +122,26 @@ const StackNav = () => {
 
       <Stack.Screen name="Posters" component={Posters}
        options={{headerShown: false}}/>
+
+      <Stack.Screen name="Banner" component={Banner}
+       options={{headerShown: false}}/>
+
+      <Stack.Screen name="Parties" component={Parties}
+        options={{headerShown:false}}
+       />
+
+      <Stack.Screen name="Events" component={Events}
+        options={{headerShown:false}}
+       />
+
+    <Stack.Screen name="WebStories" component={WebStories}
+        options={{headerShown:false}}
+       />
+
+<Stack.Screen name="Stories" component={Stories}
+        options={{headerShown:false}}
+       />
+
 
     </Stack.Navigator>
 

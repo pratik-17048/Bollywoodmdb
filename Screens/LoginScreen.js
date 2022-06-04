@@ -1,9 +1,18 @@
 import {View, Text, StyleSheet,Image} from 'react-native';
 import React from 'react';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import CustomHeader from '../Header/CustomHeader';
 
 const LoginScreen = ({navigation}) => {
   return (
+    <View style={{
+      height:'100%',
+      width:'100%'
+    }}>
+      <View>
+        <CustomHeader title="Login" isHome={false} navigation={navigation}/>
+      </View>
+    
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <View style={{height: 110, width: 200, marginVertical: 20}}>
         <Image
@@ -66,6 +75,9 @@ const LoginScreen = ({navigation}) => {
         </Text>
       </View>
     </View>
+
+      </View>
+  
   );
 };
 
@@ -78,7 +90,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   googleBtn: {
-    backgroundColor: '#E58347',
+    backgroundColor: '#E98347',
     flexDirection: 'row',
     alignItems: 'center',
     borderRadius: 4,

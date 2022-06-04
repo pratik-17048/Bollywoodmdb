@@ -279,7 +279,7 @@ const ProfileScreen = ({navigation}) => {
           <TouchableOpacity 
           style={{
             width:'90%',
-            backgroundColor:'#AAE443',
+            backgroundColor:'#D8392B',
             borderRadius:4,
             marginHorizontal:15,
             padding:5,
@@ -290,7 +290,7 @@ const ProfileScreen = ({navigation}) => {
           }}
           >
             <Text style={{
-              color:'black',
+              color:'white',
               textAlign:'center',
               fontSize:18,
               fontWeight:'bold',
