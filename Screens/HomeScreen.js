@@ -146,7 +146,7 @@ const HorizontalScroll = () => {
               borderRadius: 17,
             }}>
             <View style={{backgroundColor: 'black',opacity: 0.6, margin: 5}}>
-              <Text style={{color: colors.background }}>
+              <Text style={{color: colors.text }}>
                 Donec aliquam, magna non cursus lacinia, sit amet hendrerit
                 ipsum elit vitae nisi.
               </Text>
@@ -176,7 +176,7 @@ const HorizontalScroll = () => {
               borderRadius: 17,
             }}>
             <View style={{backgroundColor: 'black', opacity: 0.6, margin: 5}}>
-              <Text style={{color: colors.background} }>
+              <Text style={{color: colors.text} }>
                 Donec aliquam, magna non cursus lacinia, sit amet hendrerit
                 ipsum elit vitae nisi.
               </Text>
@@ -508,7 +508,7 @@ function HomeScreen({navigation}) {
                     opacity: 0.6,
                     margin: 5,
                   }}>
-                  <Text style={{color:colors.background}}>
+                  <Text style={{color:colors.text}}>
                     Proin facilisis felis ac magna egestas imperdiet, Vivamus
                     sit amet augue odio. Integer ullamcorper ex eros.
                   </Text>
