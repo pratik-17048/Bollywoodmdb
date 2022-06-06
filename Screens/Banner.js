@@ -67,10 +67,10 @@ const Banner = ({navigation}) => {
         navigation={navigation}></CustomHeader>
       <ScrollView style={{marginHorizontal: 12, marginVertical: 10}}>
         <View>
-          <Text style={styles.headlineText}>DVV Entertainment</Text>
-          <Text style={styles.headline2}>About DVV Entertainment</Text>
+          <Text style={[styles.headlineText,colors.text]}>DVV Entertainment</Text>
+          <Text style={[styles.headline2,colors.text]}>About DVV Entertainment</Text>
           <View style={styles.textContainer}>
-            <Text>
+            <Text style={{color:colors.text}}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -81,14 +81,17 @@ const Banner = ({navigation}) => {
           </View>
         </View>
 
-        <Text style={{fontWeight: '500', marginVertical: 10}}>Filmography</Text>
+        <Text
+          style={{fontWeight: '500', marginVertical: 10, color: colors.text}}>
+          Filmography
+        </Text>
         <View style={styles.container}>
           <Table borderStyle={{borderColor: 'transparent'}}>
             <Row
               data={tableHead}
               flexArr={[1, 1, 1, 1, 1]}
               style={styles.head}
-              textStyle={ styles.text}
+              textStyle={styles.text}
             />
             <TableWrapper style={styles.wrapper}>
               {/* <Col data={tableHead} style={styles.title} heightArr={[28,28]} textStyle={styles.text}/> */}
@@ -107,6 +110,7 @@ const Banner = ({navigation}) => {
             fontWeight: '500',
             marginVertical: 10,
             textTransform: 'uppercase',
+            color: colors.text,
           }}>
           Zee Studios complete movies list from 2022 to 2016
         </Text>
@@ -116,7 +120,6 @@ const Banner = ({navigation}) => {
               data={tableHead}
               flexArr={[1, 1, 1, 1, 1]}
               style={styles.head}
-              
             />
             <TableWrapper style={styles.wrapper}>
               {/* <Col data={tableHead} style={styles.title} heightArr={[28,28]} textStyle={styles.text}/> */}
@@ -135,21 +138,20 @@ const Banner = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  headlineText: {fontWeight: '500', fontSize: 18},
+  headlineText: {fontWeight: '500', fontSize: 18,},
   headline2: {fontSize: 15, fontWeight: '500'},
-  textContainer:{marginVertical:10},
+  textContainer: {marginVertical: 10},
   container: {flex: 1, padding: 5, paddingTop: 15},
-  head: {height: 40,borderBottomWidth:2,
-    borderColor:'#282828' },
+  head: {height: 40, borderBottomWidth: 2, borderColor: '#282828'},
   textHead: {fontWeight: '600', color: 'red'},
-  text: {margin: 2, fontSize: 11, fontWeight:'600'},
+  text: {margin: 2, fontSize: 11, fontWeight: '600'},
   wrapper: {flexDirection: 'row'},
   row: {
     flexDirection: 'row',
     margin: 3,
     padding: 4,
-    borderBottomWidth:1,
-    borderColor:'#282828'
+    borderBottomWidth: 1,
+    borderColor: '#282828',
   },
 });
 

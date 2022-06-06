@@ -1,17 +1,19 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import CustomHeader from '../Header/CustomHeader'
+import { useTheme } from '@react-navigation/native' 
 
 const AboutUsScreen = ({navigation}) => {
+  const {colors} = useTheme()
   return (
     <View>
      <CustomHeader title="About Us" isHome={false} navigation={navigation}/>
      <View style={{marginHorizontal:10,marginVertical:10}}>
-         <Text style={{fontSize:18,color:'white',fontWeight:'bold'}}>
+         <Text style={{fontSize:18,color:colors.text,fontWeight:'bold'}}>
              About
          </Text>
 
-         <Text style={{marginTop:10,lineHeight:19}}>
+         <Text style={{marginTop:10,lineHeight:19,color:colors.text}}>
          BollywoodMDB.com is one of the leading entertainment websites in
           India, which covers premium Bollywood news, in-depth celebrity
           interviews, movie events, and breaking entertainment news from the
@@ -29,11 +31,11 @@ const AboutUsScreen = ({navigation}) => {
           readers who read us far beyond geographical boundaries.
          </Text>
 
-         <Text style={{fontSize:18,fontWeight:'bold',color:'white',marginTop:10}}>
+         <Text style={{fontSize:18,fontWeight:'bold',color:colors.text,marginTop:10}}>
              History
          </Text>
 
-         <Text style={{marginTop:10,lineHeight:19}}>
+         <Text style={{marginTop:10,lineHeight:19,color:colors.text}}>
             BollywoodMDB first came into existence in 2007 as FridayRelease.com.
           However, in order to make it more industry-specific, the website was
           rebranded as BollywoodMDB in the year of 2013. Since then, there has

@@ -10,8 +10,10 @@ import {
 } from 'react-native';
 import React from 'react';
 import CustomHeader from '../Header/CustomHeader';
+import { useTheme } from '@react-navigation/native';
 
 const BoxofficeReview = ({navigation}) => {
+  const {colors} = useTheme()
   return (
     <View>
       <CustomHeader
@@ -22,12 +24,12 @@ const BoxofficeReview = ({navigation}) => {
 
       <ScrollView style={{marginHorizontal: 12, marginVertical: 10}}>
         <View>
-          <Text style={styles.headlineText}>
+          <Text style={[styles.headlineText,colors.text]}>
             Lorem Ipsum छपाई और अक्षर योजन उद्योग का एक साधारण डमी पाठ है. Lorem
             Ipsum सन १५०० के बाद से अभी तक इस उद्योग का मानक डमी पाठ मन गया, जब
             एक अज्ञात मुद्रक ने नमूना लेकर एक नमूना किताब बनाई.
           </Text>
-          <Text style={styles.contentText}>
+          <Text style={[styles.contentText,colors.text]}>
             यह एक लंबा स्थापित तथ्य है कि जब एक पाठक एक पृष्ठ के खाखे को देखेगा
             तो पठनीय सामग्री से विचलित हो जाएगा. Lorem Ipsum का उपयोग करने का
             मुद्दा यह है कि इसमें एक और अधिक या कम अक्षरों का सामान्य वितरण किया
@@ -65,7 +67,7 @@ const BoxofficeReview = ({navigation}) => {
                 style={{
                   width: 20,
                   height: 20,
-                  tintColor: 'white',
+                  tintColor: colors.notification,
                   marginHorizontal: 6,
                 }}
               />
@@ -122,7 +124,7 @@ const BoxofficeReview = ({navigation}) => {
             }}>
             love hostel movie review rating:4/5
           </Text>
-          <Text style={{color: 'grey'}}>
+          <Text style={{color:colors.text}}>
             Lorem Ipsum has been the industry's standard dummy text ever since
             the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book. It has survived not only
@@ -139,12 +141,12 @@ const BoxofficeReview = ({navigation}) => {
             style={{
               textTransform: 'capitalize',
               fontWeight: 'bold',
-              color: 'white',
+              color: colors.text,
             }}>
             Story
           </Text>
 
-          <Text style={{color: 'grey'}}>
+          <Text style={{color: colors.text}}>
             Lorem Ipsum has been the industry's standard dummy text ever since
             the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book. It has survived not only
@@ -161,12 +163,12 @@ const BoxofficeReview = ({navigation}) => {
             style={{
               textTransform: 'capitalize',
               fontWeight: 'bold',
-              color: 'white',
+              color: colors.text,
             }}>
             Highs
           </Text>
 
-          <Text style={{color: 'grey'}}>
+          <Text style={{color: colors.text}}>
             Lorem Ipsum has been the industry's standard dummy text ever since
             the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book. It has survived not only
@@ -191,7 +193,7 @@ const BoxofficeReview = ({navigation}) => {
             style={{
               margin: 5,
               borderWidth: 1.5,
-              borderColor: 'white',
+              borderColor: colors.text,
               borderRadius: 25,
               padding: 5,
               width: 115,
@@ -199,7 +201,7 @@ const BoxofficeReview = ({navigation}) => {
             }}>
             <Text
               style={{
-                color: 'white',
+                color: colors.text,
                 textAlign: 'center',
               }}>
               Read More
@@ -210,7 +212,7 @@ const BoxofficeReview = ({navigation}) => {
             style={{
               margin: 5,
               borderWidth: 1.5,
-              borderColor: 'white',
+              borderColor: colors.text,
               borderRadius: 25,
               padding: 5,
               width: 115,
@@ -218,7 +220,7 @@ const BoxofficeReview = ({navigation}) => {
             }}>
             <Text
               style={{
-                color: 'white',
+                color: colors.text,
                 textAlign: 'center',
               }}>
               Read More
@@ -229,7 +231,7 @@ const BoxofficeReview = ({navigation}) => {
             style={{
               margin: 5,
               borderWidth: 1.5,
-              borderColor: 'white',
+              borderColor: colors.text,
               borderRadius: 25,
               padding: 5,
               width: 115,
@@ -237,7 +239,7 @@ const BoxofficeReview = ({navigation}) => {
             }}>
             <Text
               style={{
-                color: 'white',
+                color: colors.text,
                 textAlign: 'center',
               }}>
               Read More
@@ -248,7 +250,7 @@ const BoxofficeReview = ({navigation}) => {
             style={{
               margin: 5,
               borderWidth: 1.5,
-              borderColor: 'white',
+              borderColor: colors.text,
               borderRadius: 25,
               padding: 5,
               width: 115,
@@ -256,7 +258,7 @@ const BoxofficeReview = ({navigation}) => {
             }}>
             <Text
               style={{
-                color: 'white',
+                color: colors.text,
                 textAlign: 'center',
               }}>
               Read More
@@ -267,7 +269,7 @@ const BoxofficeReview = ({navigation}) => {
             style={{
               margin: 5,
               borderWidth: 1.5,
-              borderColor: 'white',
+              borderColor: colors.text,
               borderRadius: 25,
               padding: 5,
               width: 115,
@@ -275,7 +277,7 @@ const BoxofficeReview = ({navigation}) => {
             }}>
             <Text
               style={{
-                color: 'white',
+                color: colors.text,
                 textAlign: 'center',
               }}>
               Read More
@@ -286,7 +288,7 @@ const BoxofficeReview = ({navigation}) => {
             style={{
               margin: 5,
               borderWidth: 1.5,
-              borderColor: 'white',
+              borderColor: colors.text,
               borderRadius: 25,
               padding: 5,
               width: 115,
@@ -294,7 +296,7 @@ const BoxofficeReview = ({navigation}) => {
             }}>
             <Text
               style={{
-                color: 'white',
+                color: colors.text,
                 textAlign: 'center',
               }}>
               Read More
@@ -304,7 +306,7 @@ const BoxofficeReview = ({navigation}) => {
 
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
           <Text
-            style={{color: 'white', marginVertical: 10, textAlign: 'center'}}>
+            style={{color: colors.text, marginVertical: 10, textAlign: 'center'}}>
             Keep visting BollywoodMDB.com for more exciting updates!
           </Text>
         </View>

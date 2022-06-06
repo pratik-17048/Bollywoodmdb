@@ -3,8 +3,10 @@ import React from 'react';
 import {Link} from '@react-navigation/native';
 import CustomHeader from '../Header/CustomHeader';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
+import { useTheme } from '@react-navigation/native'; 
 
 const ProfileScreen = ({navigation}) => {
+  const {colors} = useTheme()
   return (
     <View>
       <CustomHeader title="Profile" isHome={false} navigation={navigation} />
@@ -26,7 +28,7 @@ const ProfileScreen = ({navigation}) => {
           <Text
             style={{
               textAlign: 'center',
-              color: 'white',
+              color: colors.text,
               textTransform: 'capitalize',
               fontSize: 17,
               fontWeight: 'bold',

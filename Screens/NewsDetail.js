@@ -69,6 +69,7 @@ const Data = [
 
 
 const DetailItem = ({description, images}) => (
+  
   <View style={styles.ViewContainer}>
     <View style={styles.itemImgContainer}>
       <Image
@@ -95,6 +96,7 @@ const DetailItem = ({description, images}) => (
 );
 
 const RelatedTopic = () => {
+  const {colors} = useTheme()
   const renderItem = ({item}) => (
     <DetailItem description={item.description} images={item.img}></DetailItem>
   );
@@ -111,6 +113,7 @@ const RelatedTopic = () => {
 };
 
 const NewsDetail = ({navigation, route}) => {
+  const {colors} = useTheme()
   const {id, img} = route.params
   return (
     <View>
@@ -121,7 +124,7 @@ const NewsDetail = ({navigation, route}) => {
             style={{
               fontSize: 19,
               fontWeight: '700',
-              color: 'grey',
+              color:colors.text,
               marginTop: 10,
             }}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -130,7 +133,7 @@ const NewsDetail = ({navigation, route}) => {
             and scrambled it to make a type specimen book.
           </Text>
 
-          <Text style={{fontSize: 16, color: 'grey', marginTop: 10, marginVertical:10}}>
+          <Text style={{fontSize: 16, color: colors.text, marginTop: 10, marginVertical:10}}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -187,7 +190,7 @@ const NewsDetail = ({navigation, route}) => {
             </View>
           </View>
 
-          <Text style={{fontSize:18,color:'white',lineHeight:25}}>
+          <Text style={{fontSize:18,color:colors.text,lineHeight:25}}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -214,7 +217,7 @@ const NewsDetail = ({navigation, route}) => {
               style={{
                 margin: 5,
                 borderWidth: 1.5,
-                borderColor: 'white',
+                borderColor: colors.text,
                 borderRadius: 25,
                 padding: 5,
                 width: 115,
@@ -222,7 +225,7 @@ const NewsDetail = ({navigation, route}) => {
               }}>
               <Text
                 style={{
-                  color: 'white',
+                  color: colors.text,
                   textAlign: 'center',
                 }}>
             
@@ -235,7 +238,7 @@ const NewsDetail = ({navigation, route}) => {
               style={{
                 margin: 5,
                 borderWidth: 1.5,
-                borderColor: 'white',
+                borderColor: colors.text,
                 borderRadius: 25,
                 padding: 5,
                 width: 115,
@@ -243,7 +246,7 @@ const NewsDetail = ({navigation, route}) => {
               }}>
               <Text
                 style={{
-                  color: 'white',
+                  color: colors.text,
                   textAlign: 'center',
                 }}>
                 
@@ -256,7 +259,7 @@ const NewsDetail = ({navigation, route}) => {
               style={{
                 margin: 5,
                 borderWidth: 1.5,
-                borderColor: 'white',
+                borderColor:colors.text,
                 borderRadius: 25,
                 padding: 5,
                 width: 115,
@@ -264,7 +267,7 @@ const NewsDetail = ({navigation, route}) => {
               }}>
               <Text
                 style={{
-                  color: 'white',
+                  color: colors.text,
                   textAlign: 'center',
                 }}>
                 Read More
@@ -276,7 +279,7 @@ const NewsDetail = ({navigation, route}) => {
               style={{
                 margin: 5,
                 borderWidth: 1.5,
-                borderColor: 'white',
+                borderColor: colors.text,
                 borderRadius: 25,
                 padding: 5,
                 width: 115,
@@ -284,7 +287,7 @@ const NewsDetail = ({navigation, route}) => {
               }}>
               <Text
                 style={{
-                  color: 'white',
+                  color: colors.text,
                   textAlign: 'center',
                 }}>
                 Read More

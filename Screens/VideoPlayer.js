@@ -2,6 +2,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import React, {useState, useCallback} from 'react';
 import YoutubePlayer from 'react-native-youtube-iframe';
 import CustomHeader from '../Header/CustomHeader';
+import { useTheme } from '@react-navigation/native';
 
 export default function VideoPlayer({navigation, route}) {
   const [playing, setPlaying] = useState(false);
@@ -18,6 +19,7 @@ export default function VideoPlayer({navigation, route}) {
   }, []);
 
   const {videoId} = route.params;
+  const {colors} = useTheme()
   return (
     <View>
       <CustomHeader title="Trailer" isHome={false} navigation={navigation} />
@@ -35,12 +37,12 @@ export default function VideoPlayer({navigation, route}) {
         style={{
           borderRadius: 25,
           borderWidth: 1,
-          borderColor: 'white',
+          borderColor: colors.text,
           paddingHorizontal: 10,
           paddingVertical: 5,
           marginHorizontal: 50,
           textAlign: 'center',
-          color: 'white',
+          color: colors.text,
         }}>
         {playing ? 'Pause' : 'Play'}
       </Text>

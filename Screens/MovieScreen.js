@@ -13,6 +13,7 @@ import { useTheme } from '@react-navigation/native';
 import CustomHeader from '../Header/CustomHeader';
 
 
+
 const YearData = [
   {
     id: 1,
@@ -103,8 +104,8 @@ const Calendar = ({month, year ,id, })=>{
             padding: 10,
             margin: 5,
           }}>
-          <Text style={{color:'white'}} >{month}</Text>
-          <Text style={{color:'white'}} >{year}</Text>
+          <Text style={{color:colors.text}} >{month}</Text>
+          <Text style={{color:colors.text}} >{year}</Text>
         </TouchableOpacity>
   )
 }

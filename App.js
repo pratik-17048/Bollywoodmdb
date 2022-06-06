@@ -8,8 +8,11 @@ import StackNav from './Components/StackNav';
 
 
 
+
+
 export default function App() {
   const scheme = useColorScheme(); 
+
   
   return (
     <NavigationContainer theme={ scheme === 'dark' ? DarkTheme : DefaultTheme}>

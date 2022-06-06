@@ -2,8 +2,10 @@ import {StyleSheet, Text, View,Image,TouchableOpacity} from 'react-native';
 import React from 'react';
 import CustomHeader from '../Header/CustomHeader';
 import { ScrollView } from 'react-native-gesture-handler';
+import { useTheme } from '@react-navigation/native';
 
 const Events = ({navigation}) => {
+  const {colors} = useTheme()
   return (
     <View >
         <ScrollView>
@@ -94,7 +96,7 @@ const Events = ({navigation}) => {
               style={{
                 margin: 5,
                 borderWidth: 1.5,
-                borderColor: 'white',
+                borderColor: colors.text,
                 borderRadius: 25,
                 padding: 5,
                 width: 115,
@@ -102,7 +104,7 @@ const Events = ({navigation}) => {
               }}>
               <Text
                 style={{
-                  color: 'white',
+                  color: colors.text,
                   textAlign: 'center',
                 }}>
             
@@ -115,7 +117,7 @@ const Events = ({navigation}) => {
               style={{
                 margin: 5,
                 borderWidth: 1.5,
-                borderColor: 'white',
+                borderColor: colors.text,
                 borderRadius: 25,
                 padding: 5,
                 width: 115,
@@ -123,7 +125,7 @@ const Events = ({navigation}) => {
               }}>
               <Text
                 style={{
-                  color: 'white',
+                  color: colors.text,
                   textAlign: 'center',
                 }}>
                 
@@ -136,7 +138,7 @@ const Events = ({navigation}) => {
               style={{
                 margin: 5,
                 borderWidth: 1.5,
-                borderColor: 'white',
+                borderColor: colors.text,
                 borderRadius: 25,
                 padding: 5,
                 width: 115,
@@ -144,7 +146,7 @@ const Events = ({navigation}) => {
               }}>
               <Text
                 style={{
-                  color: 'white',
+                  color: colors.text,
                   textAlign: 'center',
                 }}>
                 Read More
@@ -156,7 +158,7 @@ const Events = ({navigation}) => {
               style={{
                 margin: 5,
                 borderWidth: 1.5,
-                borderColor: 'white',
+                borderColor: colors.text,
                 borderRadius: 25,
                 padding: 5,
                 width: 115,
@@ -164,7 +166,7 @@ const Events = ({navigation}) => {
               }}>
               <Text
                 style={{
-                  color: 'white',
+                  color: colors.text,
                   textAlign: 'center',
                 }}>
                 Read More

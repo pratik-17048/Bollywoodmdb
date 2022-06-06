@@ -7,6 +7,7 @@ import {
 } from 'react-native-gesture-handler';
 import CustomHeader from '../Header/CustomHeader';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import { useTheme } from '@react-navigation/native';
 
 const cast = [
   {
@@ -43,6 +44,7 @@ const cast = [
 ];
 
 const CastList = ({navigation}) => {
+  const {colors} = useTheme()
   return (
     <View>
       <View
@@ -169,6 +171,7 @@ const RelatedTopics = ({navigation}) => {
 };
 
 const LatestMovies = () => {
+  const {colors} = useTheme()
   return (
     <View>
       <View
@@ -215,7 +218,7 @@ const LatestMovies = () => {
           </TouchableOpacity>
           <View>
             <Text
-              style={{textAlign: 'center', justifyContent: 'center', flex: 1}}>
+              style={{textAlign: 'center', justifyContent: 'center', flex: 1,color:colors.text}}>
                Panchayat
             </Text>
           </View>
@@ -252,7 +255,7 @@ const LatestMovies = () => {
           </TouchableOpacity>
           <View>
             <Text
-              style={{textAlign: 'center', justifyContent: 'center', flex: 1}}>
+              style={{textAlign: 'center', justifyContent: 'center', flex: 1,color:colors.text}}>
             Family Man
             </Text>
           </View>
@@ -289,7 +292,7 @@ const LatestMovies = () => {
           </TouchableOpacity>
           <View>
             <Text
-              style={{textAlign: 'center', justifyContent: 'center', flex: 1}}>
+              style={{textAlign: 'center', justifyContent: 'center', flex: 1,color:colors.text}}>
              Laxmi
             </Text>
           </View>
@@ -326,7 +329,7 @@ const LatestMovies = () => {
           </TouchableOpacity>
           <View>
             <Text
-              style={{textAlign: 'center', justifyContent: 'center', flex: 1}}>
+              style={{textAlign: 'center', justifyContent: 'center', flex: 1,color:colors.text}}>
                Arya
             </Text>
           </View>
@@ -360,6 +363,7 @@ const data = [
 ];
 
 const Posters = ({navigation}) => {
+  const {colors} =useTheme()
   return (
     <View>
       <View
@@ -423,6 +427,7 @@ const Posters = ({navigation}) => {
 };
 
 const StillImages = ({navigation}) => {
+  const {colors} = useTheme()
   return (
     <View>
       <View
@@ -573,6 +578,7 @@ const Data1 = [
 ];
 
 const DetailSection = ({item}) => {
+  const {colors} = useTheme()
   return (
     <TouchableOpacity style={styles.ViewContainer}>
       <View style={styles.itemImgContainer}>

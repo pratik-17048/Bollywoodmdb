@@ -2,8 +2,10 @@ import {View, Text, StyleSheet,Image} from 'react-native';
 import React from 'react';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import CustomHeader from '../Header/CustomHeader';
+import { useTheme } from '@react-navigation/native';
 
 const LoginScreen = ({navigation}) => {
+  const {colors} = useTheme()
   return (
     <View style={{
       height:'100%',

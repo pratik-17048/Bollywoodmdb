@@ -2,8 +2,11 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import CustomHeader from '../Header/CustomHeader';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
+import { useTheme } from '@react-navigation/native';
+import { color } from 'react-native-reanimated';
 
 const Boxoffice = ({navigation}) => {
+  const {colors} = useTheme()
   return (
     <View>
       <CustomHeader isHome={false} navigation={navigation} title="Box Office" />
@@ -11,12 +14,12 @@ const Boxoffice = ({navigation}) => {
       <ScrollView
         style={{marginVertical: 10}}
         showsVerticalScrollIndicator={false}>
-        <Text style={{textTransform: 'capitalize', fontSize: 18}}>
+        <Text style={{textTransform: 'capitalize', fontSize: 18 ,color:colors.text}}>
           bollywood Boxoffice collection report 2022-2021 report &amp; verdict
           india
         </Text>
 
-        <Text style={{marginVertical: 10}}>
+        <Text style={{marginVertical: 10 , color:colors.text}}>
           Updated on: 30 May, 2022 18:13:49 (GMT)
         </Text>
 
@@ -38,17 +41,17 @@ const Boxoffice = ({navigation}) => {
               />
             </View>
             <View style={{flex: 1, paddingHorizontal: 15}}>
-              <Text style={styles.cardheadline}>END GAME</Text>
-              <Text style={styles.cardText}>OPENING: 20.67CR</Text>
-              <Text style={styles.cardText}>WEEKEND:58.54CR</Text>
-              <Text style={styles.cardText}>FIRST WEEK:105.62CR</Text>
-              <Text style={styles.cardText}>TOTAL COLLECTION:197.6 CR</Text>
+              <Text style={[styles.cardheadline,colors.text]}>END GAME</Text>
+              <Text style={[styles.cardText,colors.text]}>OPENING: 20.67CR</Text>
+              <Text style={[styles.cardText,colors.text]}>WEEKEND:58.54CR</Text>
+              <Text style={[styles.cardText,colors.text]}>FIRST WEEK:105.62CR</Text>
+              <Text style={[styles.cardText,colors.text]}>TOTAL COLLECTION:197.6 CR</Text>
             </View>
             <View
               style={{
                 paddingHorizontal: 10,
               }}>
-              <Text style={styles.RatingBtn}>Super Hit</Text>
+              <Text style={[styles.RatingBtn,colors.text]}>Super Hit</Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -70,17 +73,17 @@ const Boxoffice = ({navigation}) => {
               />
             </View>
             <View style={{flex: 1, paddingHorizontal: 15}}>
-              <Text style={styles.cardheadline}>END GAME</Text>
-              <Text style={styles.cardText}>OPENING: 20.67CR</Text>
-              <Text style={styles.cardText}>WEEKEND:58.54CR</Text>
-              <Text style={styles.cardText}>FIRST WEEK:105.62CR</Text>
-              <Text style={styles.cardText}>TOTAL COLLECTION:197.6 CR</Text>
+            <Text style={[styles.cardheadline,colors.text]}>END GAME</Text>
+              <Text style={[styles.cardText,colors.text]}>OPENING: 20.67CR</Text>
+              <Text style={[styles.cardText,colors.text]}>WEEKEND:58.54CR</Text>
+              <Text style={[styles.cardText,colors.text]}>FIRST WEEK:105.62CR</Text>
+              <Text style={[styles.cardText,colors.text]}>TOTAL COLLECTION:197.6 CR</Text>
             </View>
             <View
               style={{
                 paddingHorizontal: 10,
               }}>
-              <Text style={styles.RatingBtn}>Super Hit</Text>
+              <Text style={[styles.RatingBtn,colors.text]}>Super Hit</Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -102,17 +105,17 @@ const Boxoffice = ({navigation}) => {
               />
             </View>
             <View style={{flex: 1, paddingHorizontal: 15}}>
-              <Text style={styles.cardheadline}>END GAME</Text>
-              <Text style={styles.cardText}>OPENING: 20.67CR</Text>
-              <Text style={styles.cardText}>WEEKEND:58.54CR</Text>
-              <Text style={styles.cardText}>FIRST WEEK:105.62CR</Text>
-              <Text style={styles.cardText}>TOTAL COLLECTION:197.6 CR</Text>
+            <Text style={[styles.cardheadline,colors.text]}>END GAME</Text>
+              <Text style={[styles.cardText,colors.text]}>OPENING: 20.67CR</Text>
+              <Text style={[styles.cardText,colors.text]}>WEEKEND:58.54CR</Text>
+              <Text style={[styles.cardText,colors.text]}>FIRST WEEK:105.62CR</Text>
+              <Text style={[styles.cardText,colors.text]}>TOTAL COLLECTION:197.6 CR</Text>
             </View>
             <View
               style={{
                 paddingHorizontal: 10,
               }}>
-              <Text style={styles.RatingBtn}>Super Hit</Text>
+              <Text style={[styles.RatingBtn,colors.text]}>Super Hit</Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -134,17 +137,17 @@ const Boxoffice = ({navigation}) => {
               />
             </View>
             <View style={{flex: 1, paddingHorizontal: 15}}>
-              <Text style={styles.cardheadline}>END GAME</Text>
-              <Text style={styles.cardText}>OPENING: 20.67CR</Text>
-              <Text style={styles.cardText}>WEEKEND:58.54CR</Text>
-              <Text style={styles.cardText}>FIRST WEEK:105.62CR</Text>
-              <Text style={styles.cardText}>TOTAL COLLECTION:197.6 CR</Text>
+            <Text style={[styles.cardheadline,colors.text]}>END GAME</Text>
+              <Text style={[styles.cardText,colors.text]}>OPENING: 20.67CR</Text>
+              <Text style={[styles.cardText,colors.text]}>WEEKEND:58.54CR</Text>
+              <Text style={[styles.cardText,colors.text]}>FIRST WEEK:105.62CR</Text>
+              <Text style={[styles.cardText,colors.text]}>TOTAL COLLECTION:197.6 CR</Text>
             </View>
             <View
               style={{
                 paddingHorizontal: 10,
               }}>
-              <Text style={styles.RatingBtn}>Super Hit</Text>
+              <Text style={[styles.RatingBtn,colors.text]}>Super Hit</Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -166,17 +169,17 @@ const Boxoffice = ({navigation}) => {
               />
             </View>
             <View style={{flex: 1, paddingHorizontal: 15}}>
-              <Text style={styles.cardheadline}>END GAME</Text>
-              <Text style={styles.cardText}>OPENING: 20.67CR</Text>
-              <Text style={styles.cardText}>WEEKEND:58.54CR</Text>
-              <Text style={styles.cardText}>FIRST WEEK:105.62CR</Text>
-              <Text style={styles.cardText}>TOTAL COLLECTION:197.6 CR</Text>
+            <Text style={[styles.cardheadline,colors.text]}>END GAME</Text>
+              <Text style={[styles.cardText,colors.text]}>OPENING: 20.67CR</Text>
+              <Text style={[styles.cardText,colors.text]}>WEEKEND:58.54CR</Text>
+              <Text style={[styles.cardText,colors.text]}>FIRST WEEK:105.62CR</Text>
+              <Text style={[styles.cardText,colors.text]}>TOTAL COLLECTION:197.6 CR</Text>
             </View>
             <View
               style={{
                 paddingHorizontal: 10,
               }}>
-              <Text style={styles.RatingBtn}>Super Hit</Text>
+              <Text style={[styles.RatingBtn,colors.text]}>Super Hit</Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -198,17 +201,17 @@ const Boxoffice = ({navigation}) => {
               />
             </View>
             <View style={{flex: 1, paddingHorizontal: 15}}>
-              <Text style={styles.cardheadline}>END GAME</Text>
-              <Text style={styles.cardText}>OPENING: 20.67CR</Text>
-              <Text style={styles.cardText}>WEEKEND:58.54CR</Text>
-              <Text style={styles.cardText}>FIRST WEEK:105.62CR</Text>
-              <Text style={styles.cardText}>TOTAL COLLECTION:197.6 CR</Text>
+            <Text style={[styles.cardheadline,colors.text]}>END GAME</Text>
+              <Text style={[styles.cardText,colors.text]}>OPENING: 20.67CR</Text>
+              <Text style={[styles.cardText,colors.text]}>WEEKEND:58.54CR</Text>
+              <Text style={[styles.cardText,colors.text]}>FIRST WEEK:105.62CR</Text>
+              <Text style={[styles.cardText,colors.text]}>TOTAL COLLECTION:197.6 CR</Text>
             </View>
             <View
               style={{
                 paddingHorizontal: 10,
               }}>
-              <Text style={styles.RatingBtn}>Super Hit</Text>
+              <Text style={[styles.RatingBtn,colors.text]}>Super Hit</Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -232,17 +235,17 @@ const Boxoffice = ({navigation}) => {
               />
             </View>
             <View style={{flex: 1, paddingHorizontal: 15}}>
-              <Text style={styles.cardheadline}>END GAME</Text>
-              <Text style={styles.cardText}>OPENING: 20.67CR</Text>
-              <Text style={styles.cardText}>WEEKEND:58.54CR</Text>
-              <Text style={styles.cardText}>FIRST WEEK:105.62CR</Text>
-              <Text style={styles.cardText}>TOTAL COLLECTION:197.6 CR</Text>
+            <Text style={[styles.cardheadline,colors.text]}>END GAME</Text>
+              <Text style={[styles.cardText,colors.text]}>OPENING: 20.67CR</Text>
+              <Text style={[styles.cardText,colors.text]}>WEEKEND:58.54CR</Text>
+              <Text style={[styles.cardText,colors.text]}>FIRST WEEK:105.62CR</Text>
+              <Text style={[styles.cardText,colors.text]}>TOTAL COLLECTION:197.6 CR</Text>
             </View>
             <View
               style={{
                 paddingHorizontal: 10,
               }}>
-              <Text style={styles.RatingBtn}>Super Hit</Text>
+              <Text style={[styles.RatingBtn,colors.text]}>Super Hit</Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -281,5 +284,6 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 1,
     borderColor: 'green',
+    
   },
 });

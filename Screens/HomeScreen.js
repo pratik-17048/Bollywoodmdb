@@ -121,6 +121,7 @@ const SomeData = [
 ];
 
 const HorizontalScroll = () => {
+  const {colors} = useTheme()
   return (
     <ScrollView horizontal={true}>
       <View style={styles.HorizontalContainer}>
@@ -144,8 +145,8 @@ const HorizontalScroll = () => {
               alignItems: 'center',
               borderRadius: 17,
             }}>
-            <View style={{backgroundColor: 'black', opacity: 0.6, margin: 5}}>
-              <Text style={{color: 'white'}}>
+            <View style={{backgroundColor: 'black',opacity: 0.6, margin: 5}}>
+              <Text style={{color: colors.background }}>
                 Donec aliquam, magna non cursus lacinia, sit amet hendrerit
                 ipsum elit vitae nisi.
               </Text>
@@ -175,7 +176,7 @@ const HorizontalScroll = () => {
               borderRadius: 17,
             }}>
             <View style={{backgroundColor: 'black', opacity: 0.6, margin: 5}}>
-              <Text style={{color: 'white'}}>
+              <Text style={{color: colors.background} }>
                 Donec aliquam, magna non cursus lacinia, sit amet hendrerit
                 ipsum elit vitae nisi.
               </Text>
@@ -188,6 +189,7 @@ const HorizontalScroll = () => {
 };
 
 const SectionDetail = ({item}) => {
+  const {colors} = useTheme()
   return (
     <View style={styles.itemImgContainer}>
       <View style={styles.Sectionimg}>
@@ -210,9 +212,9 @@ const SectionDetail = ({item}) => {
           width: 210,
           marginLeft: 2,
         }}>
-        <Text>{item.description}</Text>
+        <Text style={{color: colors.text} }>{item.description}</Text>
 
-        <Text style={{marginTop: 7}}>{item.oneLiner}</Text>
+        <Text style={{marginTop: 7,color: colors.text}} >{item.oneLiner}</Text>
       </View>
     </View>
   );
@@ -243,7 +245,7 @@ const BottomComponent = () => {
           <Text style={[styles.sectionHeader, {color: colors.text}]}>
             {section.title}
           </Text>
-          <Text onPress={sectionStoryhandler}>see all</Text>
+          <Text onPress={sectionStoryhandler}   style={{color: colors.text}}>see all</Text>
         </View>;
       }}></SectionList>
   );
@@ -268,6 +270,7 @@ const reviews = [
 ];
 
 const HeaderBtn = ({navigation}) => {
+  const {colors} = useTheme()
   const [selectedItem, SetSelectedItem] = React.useState(null);
   const onSelect = item => {
     navigation.navigate(`${item.Route}`);
@@ -277,7 +280,7 @@ const HeaderBtn = ({navigation}) => {
     <View style={{marginHorizontal: 10}}>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={{marginHorizontal: 12, marginVertical: 5}}>
-          <Text onPress={() => navigation.navigate('Home')}>Home</Text>
+          <Text onPress={() => navigation.navigate('Home')} style={{color: colors.text}}>Home</Text>
         </View>
 
         <View
@@ -285,7 +288,7 @@ const HeaderBtn = ({navigation}) => {
             marginHorizontal: 12,
             marginVertical: 5,
           }}>
-          <Text onPress={() => navigation.navigate('NewsAdda')}>News Adda</Text>
+          <Text onPress={() => navigation.navigate('NewsAdda')} style={{color: colors.text}}>News Adda</Text>
         </View>
         
         <View style={{marginHorizontal: 12, marginVertical: 5}}>
@@ -294,19 +297,20 @@ const HeaderBtn = ({navigation}) => {
             onSelect={onSelect}
            
             defaultTitle="Videos"
+            style={{color:colors.text}}
           />
         </View>
         <View style={{marginHorizontal: 12, marginVertical: 5}}>
           <DropDown
             fruits={movies}
             onSelect={onSelect}
-           
+           style={{color:colors.text}}
             defaultTitle="Movies"
           />
         </View>
 
         <View style={{marginHorizontal: 12, marginVertical: 5}}>
-          <Text onPress={() => navigation.navigate('Boxoffice')}>
+          <Text onPress={() => navigation.navigate('Boxoffice')} style={{color: colors.text}}>
             Box Office
           </Text>
         </View>
@@ -335,6 +339,7 @@ const HeaderBtn = ({navigation}) => {
 };
 
 const WebStories = ({navigation}) => {
+  const {colors} = useTheme()
   return (
     <View style={{marginHorizontal: 12}}>
       <View
@@ -349,11 +354,11 @@ const WebStories = ({navigation}) => {
             fontSize: 16,
             fontWeight: 'bold',
             textTransform: 'uppercase',
-            color: 'white',
+            color:colors.text,
           }}>
           WebStories
         </Text>
-        <Text onPress={() => navigation.navigate('WebStories')}>see all</Text>
+        <Text onPress={() => navigation.navigate('WebStories')} style={{color: colors.text}}>see all</Text>
       </View>
 
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
@@ -374,7 +379,7 @@ const WebStories = ({navigation}) => {
               />
             </View>
 
-            <Text style={{padding: 5}}>
+            <Text style={{padding: 5,color: colors.text}}>
               lorem ipsm dolor sit amet , consetector
             </Text>
           </TouchableOpacity>
@@ -397,7 +402,7 @@ const WebStories = ({navigation}) => {
               />
             </View>
 
-            <Text style={{padding: 5}}>
+            <Text style={{padding: 5 ,color:colors.text }} >
               lorem ipsm dolor sit amet , consetector
             </Text>
           </TouchableOpacity>
@@ -420,7 +425,7 @@ const WebStories = ({navigation}) => {
               />
             </View>
 
-            <Text style={{padding: 5}}>
+            <Text style={{padding: 5 , color:colors.text}}>
               lorem ipsm dolor sit amet , consetector
             </Text>
           </TouchableOpacity>
@@ -443,7 +448,7 @@ const WebStories = ({navigation}) => {
               />
             </View>
 
-            <Text style={{padding: 5}}>
+            <Text style={{padding: 5 , color:colors.text}} >
               lorem ipsm dolor sit amet , consetector
             </Text>
           </TouchableOpacity>
@@ -499,11 +504,11 @@ function HomeScreen({navigation}) {
                 imageStyle={{borderRadius: 18}}>
                 <View
                   style={{
-                    backgroundColor: 'black',
+                   backgroundColor:'black',
                     opacity: 0.6,
                     margin: 5,
                   }}>
-                  <Text style={{color: 'white'}}>
+                  <Text style={{color:colors.background}}>
                     Proin facilisis felis ac magna egestas imperdiet, Vivamus
                     sit amet augue odio. Integer ullamcorper ex eros.
                   </Text>

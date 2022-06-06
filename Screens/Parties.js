@@ -69,6 +69,7 @@ const Data = [
 
 
 const DetailSection = ({item,navigation}) => {  
+  const {colors} = useTheme()
   return(
   <TouchableOpacity
     style={styles.ViewContainer}

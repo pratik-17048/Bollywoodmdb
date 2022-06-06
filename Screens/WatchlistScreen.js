@@ -134,7 +134,7 @@ import {
                       textTransform: 'capitalize',
                       fontSize:15,
                       textAlign:'center',
-                      color:'white',
+                      color:colors.text,
                       fontWeight:'800',
                       
                       

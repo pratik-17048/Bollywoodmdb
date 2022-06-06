@@ -134,7 +134,7 @@ import {
                       textTransform: 'capitalize',
                       fontSize:15,
                       textAlign:'center',
-                      color:'white',
+                      color:colors.text,
                       fontWeight:'700',
                       
                       
@@ -150,7 +150,7 @@ import {
                       
                       />
 
-                      <Text style={{fontWeight:'500',color:'white'}}>
+                      <Text style={{fontWeight:'500',color:colors.text}}>
                           4.5/5.0
                       </Text>
 

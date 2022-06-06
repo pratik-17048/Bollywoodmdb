@@ -150,6 +150,7 @@ const Trailers = ({navigation}) => {
                 <Text
                   style={{
                     textTransform: 'capitalize',
+                    color:colors.text
                   }}>
                   {element.movieName}
                 </Text>

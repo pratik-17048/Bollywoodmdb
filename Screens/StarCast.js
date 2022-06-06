@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import CustomHeader from '../Header/CustomHeader';
+import { useTheme } from '@react-navigation/native';
 
 const Data = [
   {
@@ -129,6 +130,7 @@ const data = [
 ];
 
 const Photos = () => {
+  const {colors} = useTheme()
   return (
     <View>
       <View
@@ -188,7 +190,7 @@ const Photos = () => {
                   textTransform: 'capitalize',
                   fontSize: 15,
                   textAlign: 'center',
-                  color: 'white',
+                  color: colors.text,
                   fontWeight: '800',
                 }}>
                 {element.celebName}

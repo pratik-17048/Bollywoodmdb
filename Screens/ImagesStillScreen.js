@@ -11,6 +11,7 @@ import {useTheme} from '@react-navigation/native';
 import CustomHeader from '../Header/CustomHeader';
 import {ScrollView} from 'react-native-gesture-handler';
 
+
 const data = [
   {
     id: 1,
@@ -94,6 +95,7 @@ const ImagesStills = ({navigation}) => {
             fontWeight: '600',
             marginVertical: 10,
             
+            
           }}>
         New bollywood Movie Stills
         </Text>
@@ -135,8 +137,8 @@ const ImagesStills = ({navigation}) => {
                     textTransform: 'capitalize',
                     fontSize:15,
                     textAlign:'center',
-                    color:'white',
-                    fontWeight:'800',
+                    color:colors.text,
+                    fontWeight:'600',
                     
                     
                   }}>

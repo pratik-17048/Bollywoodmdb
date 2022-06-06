@@ -3,9 +3,11 @@ import React from 'react';
 import CustomHeader from '../Header/CustomHeader';
 import {ScrollView, TextInput} from 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
+import { useTheme } from '@react-navigation/native';
 
 
 const ReviewWriteScreen = () => {
+  const {colors} = useTheme()
   return (
     <View>
       <View>
@@ -35,7 +37,7 @@ const ReviewWriteScreen = () => {
 
         <Text style={{
           fontSize:18,
-          color:'white',
+          color:colors.text,
           marginVertical:5
         }}>Full Name</Text>
 
@@ -47,7 +49,7 @@ const ReviewWriteScreen = () => {
 
         <Text style={{
           fontSize:18,
-          color:'white',
+          color:colors.text,
           marginVertical:5
         }}>Email address</Text>
 
@@ -61,7 +63,7 @@ const ReviewWriteScreen = () => {
 
         <Text style={{
           fontSize:18,
-          color:'white',
+          color:colors.text,
           marginVertical:5
         }}>Review</Text>
 

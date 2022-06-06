@@ -127,7 +127,7 @@ const Songs = ({navigation}) => {
                   margin: 10,
                 }}
                 onPress={() =>
-                  navigation.navigate('SongPlayer', {
+                  navigation.navigate('', {
                     videoId: `${element.videoId}`,
                   })
                 }>
@@ -161,7 +161,8 @@ const Songs = ({navigation}) => {
                 <Text
                   style={{
                     textTransform: 'capitalize',
-                  }}>
+                    textAlign:'center'
+                  }} >
                   {element.songName}
                 </Text>
               </TouchableOpacity>
